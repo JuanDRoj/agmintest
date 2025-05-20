@@ -5,6 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/MapStyles.css";
 
 const MAPBOX_MAP_STYLES = import.meta.env.VITE_MAPBOX_MAP_STYLES;
+const API_URL = import.meta.env.VITE_API_URL;
 
 const MapComponent = () => {
   const mapContainer = useRef(null);
@@ -19,7 +20,7 @@ const MapComponent = () => {
 
       map.current.addSource("lot_selection", {
         type: "vector",
-        tiles: [`http://localhost:3001/lots/${checkedField}/{z}/{x}/{y}.pbf`],
+        tiles: [`${API_URL}lots/${checkedField}/{z}/{x}/{y}.pbf`],
       });
 
       map.current.addLayer({
@@ -120,7 +121,7 @@ const MapComponent = () => {
 
       map.current.addSource("fields", {
         type: "vector",
-        tiles: ["http://localhost:3001/tiles/fields/{z}/{x}/{y}.pbf"],
+        tiles: [`${API_URL}tiles/fields/{z}/{x}/{y}.pbf`],
       });
 
       map.current.addLayer({
@@ -149,7 +150,7 @@ const MapComponent = () => {
       // Add Line Layer
       map.current.addSource("tree_lines", {
         type: "vector",
-        tiles: ["http://localhost:3001/tiles/tree_lines/{z}/{x}/{y}.pbf"],
+        tiles: [`${API_URL}tiles/tree_lines/{z}/{x}/{y}.pbf`],
       });
 
       map.current.addLayer({
@@ -187,7 +188,7 @@ const MapComponent = () => {
       // Add Tree Points Layer 1
       map.current.addSource("trees", {
         type: "vector",
-        tiles: ["http://localhost:3001/tiles/trees/{z}/{x}/{y}.pbf"],
+        tiles: [`${API_URL}tiles/trees/{z}/{x}/{y}.pbf`],
       });
 
       map.current.addLayer({
