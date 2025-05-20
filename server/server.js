@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 
 const app = express();
-const port = 3001;
+const port = process.env.SERVER_PORT;
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
