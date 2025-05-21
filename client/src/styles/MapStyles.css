@@ -75,6 +75,8 @@
   white-space: nowrap;
 }
 
+/* Pop Ups */
+
 .mapboxgl-popup {
   max-width: 100% !important;
 }
@@ -103,4 +105,34 @@
   color: #333333;
   padding: 15px;
   font-size: 20px;
+}
+
+/* Docs Container */
+
+#docs {
+  position: absolute;
+  background: #ffffff;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  top: 300px;
+  left: 20px;
+  z-index: 1;
+  width: 245px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #333333;
+  text-align: center;
+}
+
+#docs h3 {
+  font-size: 16px;
+  color: #007cbf;
+  margin-bottom: 10px;
+}
+
+#docs a {
+  font-size: 16px;
+  color: #007cbf;
+  margin-bottom: 10px;
+  align-content: center;
 }

@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import LayerToggles from "./ToggleLayers.jsx";
+import DocsInfo from "./DocsInfo.jsx";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../styles/MapStyles.css";
 
@@ -333,6 +334,7 @@ const MapComponent = () => {
         setCheckedField={setCheckedField}
         checkedField={checkedField}
       />
+      <DocsInfo />
       <div ref={mapContainer} className="map-container" id="map" />
     </div>
   );
