@@ -1,7 +1,8 @@
 import "../styles/MapStyles.css";
 
 const DocsInfo = ({}) => {
-  const docLink = "https://www.passdropit.com/TqjbPrYS"; // Also visible in code
+  const docLink =
+    "https://www.dropbox.com/scl/fi/4r8t937rks6lbslkcz4mi/ADMISION-AGMIN.pdf?rlkey=j8n7ek7kdfjtbwrpuolsvom8y&st=2zjzjq73&dl=0"; // Also visible in code
 
   return (
     <div id="docs">
